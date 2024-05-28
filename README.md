@@ -288,7 +288,7 @@ Built as a personal project for learning experience. Please feel free to contrib
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/stanislavkhatko
 [product-screenshot]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/client/assets/screenshots/secret-chat-16.44.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
