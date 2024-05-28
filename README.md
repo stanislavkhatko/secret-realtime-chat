@@ -32,7 +32,7 @@
 </div>
 
 
-[![Product Name Screen Shot][product-screenshot]](/client/assets/screenshots/secret-chat-16.44.png)
+[![Secret Chat Screen Shot][product-screenshot]](https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/client/assets/screenshots/secret-chat-16.44.png)
 
 Create public and private chatroom.
 
