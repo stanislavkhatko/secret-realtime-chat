@@ -34,7 +34,7 @@
 
 [![Secret Chat Screen Shot][product-screenshot]](https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/client/assets/screenshots/secret-chat-16.44.png)
 
-Create public and private chatroom.
+Create public of private chatroom.
 
 
 <!-- TABLE OF CONTENTS -->
@@ -176,8 +176,7 @@ Tests should be run before every commit to ensure the build is not broken by any
 
 Running Both Client and Server Tests
 ```javascript
-In the root directory
-$ npm run test
+$ npm run test // In the root directory
 ```
 
 Running Client Tests
@@ -189,22 +188,6 @@ Watching Server Tests
 ```javascript
 $ npm run server:test:watch
 ```
-
-dotenv@16.4.5
-eslint@9.3.0
-eslint-config-prettier@9.1.0
-eslint-plugin-prettier@5.1.3
-express-validator@7.1.0
-helmet@7.1.0
-jest@29.7.0
-jsonwebtoken@9.0.2
-nodemon@3.1.1
-passport@0.7.0
-passport-facebook@3.0.0
-passport-google-oauth@2.0.0
-prettier@3.2.5
-socket.io@4.7.5
-supertest@7.0.0
 
 
 ## Configuration Setup
@@ -229,7 +212,7 @@ GOOGLE_CLIENT_SECRET=GOOGLE_CLIENT_SECRET
 FACEBOOK_CLIENT_ID=FACEBOOK_CLIENT_ID
 FACEBOOK_CLIENT_SECRET=FACEBOOK_CLIENT_SECRET
 
-PORT=PORT
+SERVER_PORT=PORT
 ```
 
 ### MongoDB & Mongo Atlas
