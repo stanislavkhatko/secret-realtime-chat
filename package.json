@@ -1,0 +1,33 @@
+{
+  "name": "secret-realtime-chat",
+  "version": "1.0.1",
+  "description": "Secret Chat Application on Vue and Express with socket.io",
+  "scripts": {
+    "seed:data": "npm run seed --prefix server",
+    "client:test": "npm run test --prefix client",
+    "server:test:watch": "npm run test:watch --prefix server",
+    "server:test:local": "npm run test:local --prefix server",
+    "server:test:ci": "npm run test:ci --prefix server",
+    "test": "npm run test --prefix client && npm run server:test:ci",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "server": "nodemon server/index.js",
+    "client": "concurrently \"npm run dev --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanislavkhatko/secret-realtime-chat.git"
+  },
+  "author": "Stanislav Khatko <stanislavkhatko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanislavkhatko/secret-realtime-chat/issues"
+  },
+  "homepage": "https://github.com/stanislavkhatko/secret-realtime-chat#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.1"
+  },
+  "dependencies": {}
+}

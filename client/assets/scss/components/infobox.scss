@@ -1,0 +1,77 @@
+.infobox {
+    position: relative;
+    padding: 0 1em;
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        width: 480px;
+        margin: 0 auto 3rem auto;
+        padding: 3em 1em;
+        background: var(--background-color);
+        box-shadow: 0 0 1px 1px var(--text-color);
+        transform: translateY(30px);
+
+        @include respond(phone) {
+            width: 95%;
+            overflow: auto;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        margin: 0.5em 0;
+
+        @include respond(phone) {
+            flex-flow: column;
+        }
+
+        &--left {
+            text-align: left;
+            margin: 0 2rem 0 0;
+            display: inline-block;
+            width: 80px;
+            font-size: 0.8rem;
+
+            @include respond(phone) {
+                width: 100%;
+                text-align: left;
+                margin: 8px 0;
+            }
+        }
+
+        &--right {
+            flex-grow: 1;
+            display: inline-block;
+            background: rgba(117, 121, 138, 0.1);
+            border-radius: 5px;
+            padding: 0.6em;
+            text-align: right;
+            font-size: 0.8rem;
+
+            @include respond(phone) {
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    &__actions {
+        margin-top: 30px;
+        display: flex;
+
+        & a {
+            white-space: nowrap;
+            padding: 12px 20px;
+            flex: 1;
+
+            @include respond(phone) {
+                width: 100%;
+                margin: 0.5em 0;
+            }
+        }
+    }
+}
