@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "env": {
+  },
+  "builds": [
+    {
+      "src": "server/index.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["/**"] }
+    },
+    {
+      "src": "client/dist/**",
+      "use": "@vercel/static",
+      "config": { "includeFiles": ["client/dist/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.js"
+    },
+    {
+      "src": "/",
+      "dest": "client/dist/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "client/dist/$1"
+    }
+  ]
+}
