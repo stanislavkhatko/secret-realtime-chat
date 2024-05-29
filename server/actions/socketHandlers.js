@@ -111,7 +111,7 @@ const handleReconnectUser = async (socket, data) => {
     currentRoomId = data.room._id;
     data.socketId = socket.id;
 
-    if (socket.request.headers.referer.split('/').includes('room')) {
+    if (socket.request.headers.referer && socket.request.headers.referer.includes('room')) {
         socket.join(currentRoomId);
         socket.emit('reconnected');
         await UPDATE_ROOM_USERS(data);

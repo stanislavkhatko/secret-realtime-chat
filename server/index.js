@@ -35,7 +35,8 @@ const { Server } = require('socket.io');
 const io = new Server(index, {
     cors: {
         origin: '*'
-    }
+    },
+    allowEIO3: true
 });
 
 /** Middleware Setup */
@@ -96,18 +97,15 @@ io.on('connection', socket => {
 
 /** Serve static assets if in production */
 if (process.env.NODE_ENV === 'production') {
-    console.log(process.env.NODE_ENV);
-
     app.use(express.static(path.resolve(__dirname, '../client', 'dist')));
     app.get('*', (req, res) => {
-        console.log(1);
         res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'));
     });
 }
 
 /** Start the server if not in test environment */
 if (process.env.NODE_ENV !== 'test') {
-    index.listen(process.env.SERVER_PORT || 5000, () => {
+    index.listen(process.env.SERVER_PORT || 5000, "0.0.0.0", () => {
         logger.info(`[LOG=SERVER] Server started on port ${process.env.SERVER_PORT}`);
     });
 }
