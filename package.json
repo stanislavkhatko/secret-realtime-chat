@@ -13,7 +13,8 @@
     "build": "npm run build --prefix client",
     "start": "npm run start --prefix server",
     "server": "nodemon server/index.js",
-    "client": "concurrently \"npm run dev --prefix client\""
+    "client": "concurrently \"npm run dev --prefix client\"",
+    "heroku-postbuild": "npm install --prefix client && npm install --prefix server && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
