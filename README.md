@@ -23,7 +23,9 @@
     <a href="https://github.com/stanislavkhatko/secret-realtime-chat"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/stanislavkhatko/secret-realtime-chat">View Demo</a>
+    <a href="https://secret-realtime-chat-85815e293731.herokuapp.com">View Demo</a>
+    ·
+    <a href="https://github.com/stanislavkhatko/secret-realtime-chat">Vercel Demo</a>
     ·
     <a href="https://github.com/stanislavkhatko/secret-realtime-chat/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -175,17 +177,17 @@ $ npm run seed:data
 Tests should be run before every commit to ensure the build is not broken by any code changes.
 
 Running Both Client and Server Tests
-```javascript
+```bash
 $ npm run test // In the root directory
 ```
 
 Running Client Tests
-```javascript
+```bash
 $ npm run client:test
 ```
 
 Watching Server Tests
-```javascript
+```bash
 $ npm run server:test:watch
 ```
 
@@ -286,7 +288,7 @@ Built as a personal project for learning experience. Please feel free to contrib
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/stanislavkhatko/secret-realtime-chat/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/master/LICENSE.txt
+[license-url]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/stanislavkhatko
 [product-screenshot]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/client/assets/screenshots/secret-chat-16.44.png
