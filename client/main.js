@@ -14,11 +14,7 @@ Vue.prototype.moment = moment;
 let socket = null;
 
 /** Socket IO Client - Store in Vuex State for use in components */
-if (process.env.NODE_ENV === 'development') {
-    socket = io(`http://localhost:${import.meta.env.VITE_SOCKET_PORT || 5000}/`);
-} else {
-    socket = io('/');
-}
+socket = io('/');
 
 store.dispatch('assignSocket', socket);
 
@@ -30,7 +26,7 @@ if (localStorage.authToken) {
 }
 
 /** Axios baseUrl */
-axios.defaults.baseURL = `http://localhost:${import.meta.env.VITE_SOCKET_PORT || 5000}`;
+axios.defaults.baseURL = `/`;
 
 /** Axios Request Intercept */
 axios.interceptors.request.use(

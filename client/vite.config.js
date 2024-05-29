@@ -13,14 +13,6 @@ export default defineConfig({
             'vue': path.resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm.js')
         },
     },
-    // server: {
-    //     proxy: {
-    //         '/api': {
-    //             target: `http://127.0.0.1:${process.env.VITE_SOCKET_PORT}`,
-    //             changeOrigin: true
-    //         }
-    //     }
-    // },
     css: {
         preprocessorOptions: {
             scss: {
