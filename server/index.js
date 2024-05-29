@@ -94,11 +94,13 @@ io.on('connection', socket => {
     socket.on('reconnectUser', data => socketHandlers.handleReconnectUser(socket, data));
 });
 
-console.log(process.env.NODE_ENV);
 /** Serve static assets if in production */
 if (process.env.NODE_ENV === 'production') {
+    console.log(process.env.NODE_ENV);
+
     app.use(express.static(path.resolve(__dirname, '../client', 'dist')));
     app.get('*', (req, res) => {
+        console.log(1);
         res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'));
     });
 }
