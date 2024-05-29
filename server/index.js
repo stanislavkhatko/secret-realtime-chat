@@ -46,7 +46,15 @@ app.use(
     })
 );
 app.use(morgan('dev'));
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            "script-src": ["'self'", "unpkg.com"],
+            "img-src": ["'self'", "https: data:"],
+            "connect-src": ["'self'", "unpkg.com"]
+        },
+    },
+}));
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
