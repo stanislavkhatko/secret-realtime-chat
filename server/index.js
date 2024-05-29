@@ -94,6 +94,7 @@ io.on('connection', socket => {
     socket.on('reconnectUser', data => socketHandlers.handleReconnectUser(socket, data));
 });
 
+console.log(process.env.NODE_ENV);
 /** Serve static assets if in production */
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname, '../client', 'dist')));
