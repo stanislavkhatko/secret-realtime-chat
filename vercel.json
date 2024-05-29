@@ -2,7 +2,7 @@
   "version": 2,
   "env": {
     "DATABASE_URL": "@DATABASE_URL",
-    "SERVER_PORT": "@SERVER_PORT",
+    "PORT": "@PORT",
     "VITE_SOCKET_PORT": "@VITE_SOCKET_PORT",
     "JWT_SECRET": "@JWT_SECRET",
     "GOOGLE_CLIENT_ID": "@GOOGLE_CLIENT_ID",

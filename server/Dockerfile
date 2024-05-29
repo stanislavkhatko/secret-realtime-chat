@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose port from .env
-EXPOSE $SERVER_PORT
+EXPOSE $PORT
 
 # Command to run the server
 CMD ["node", "index.js"]

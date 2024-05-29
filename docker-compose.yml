@@ -16,14 +16,14 @@
 #      args:
 #        - NODE_ENV=${NODE_ENV}
 #        - DATABASE_URL=${DATABASE_URL}
-#        - SERVER_PORT=${SERVER_PORT}
+#        - PORT=${PORT}
 #        - JWT_SECRET=${JWT_SECRET}
 #        - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
 #        - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
 #        - FACEBOOK_CLIENT_ID=${FACEBOOK_CLIENT_ID}
 #        - FACEBOOK_CLIENT_SECRET=${FACEBOOK_CLIENT_SECRET}
 #    ports:
-#      - "${SERVER_PORT}:${SERVER_PORT}"
+#      - "${PORT}:${PORT}"
 #    depends_on:
 #      - db
 #    networks:
@@ -47,7 +47,7 @@ services:
   server:
     build: ./server
     ports:
-      - "${SERVER_PORT}:${SERVER_PORT}"
+      - "${PORT}:${PORT}"
     env_file:
       - .env
 

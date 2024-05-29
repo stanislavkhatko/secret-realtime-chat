@@ -105,8 +105,8 @@ if (process.env.NODE_ENV === 'production') {
 
 /** Start the server if not in test environment */
 if (process.env.NODE_ENV !== 'test') {
-    index.listen(process.env.SERVER_PORT || 5000, "0.0.0.0", () => {
-        logger.info(`[LOG=SERVER] Server started on port ${process.env.SERVER_PORT}`);
+    index.listen(process.env.PORT || 5000, () => {
+        logger.info(`[LOG=SERVER] Server started on port ${process.env.PORT}`);
     });
 }
 
