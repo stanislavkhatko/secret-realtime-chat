@@ -4,6 +4,5 @@
 .idea
 .env
 logs
-db
 .DS_Store
 .vercel
