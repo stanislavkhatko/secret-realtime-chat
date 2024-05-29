@@ -1,15 +1,5 @@
 {
   "version": 2,
-  "env": {
-    "DATABASE_URL": "@DATABASE_URL",
-    "PORT": "@PORT",
-    "VITE_SOCKET_PORT": "@VITE_SOCKET_PORT",
-    "JWT_SECRET": "@JWT_SECRET",
-    "GOOGLE_CLIENT_ID": "@GOOGLE_CLIENT_ID",
-    "GOOGLE_CLIENT_SECRET": "@GOOGLE_CLIENT_SECRET",
-    "FACEBOOK_CLIENT_ID": "@FACEBOOK_CLIENT_ID",
-    "FACEBOOK_CLIENT_SECRET": "@FACEBOOK_CLIENT_SECRET"
-  },
   "builds": [
     {
       "src": "server/index.js",
