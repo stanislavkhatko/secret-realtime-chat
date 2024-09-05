@@ -17,7 +17,7 @@ const populateData = async () => {
 
     console.log('\n[PROCESS:SEED] Seeding User Data');
 
-    await User.deleteMany({}).exec();
+    // await User.deleteMany({}).exec();
 
     for (let user of userSeedData) {
         const userData = await new User({

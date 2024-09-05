@@ -40,11 +40,11 @@ const io = new Server(index, {
 });
 
 /** Middleware Setup */
-app.use(
-    morgan('combined', {
-        stream: fs.createWriteStream('logs/access.log', { flags: 'a' })
-    })
-);
+// app.use(
+//     morgan('combined', {
+//         stream: fs.createWriteStream('logs/access.log', { flags: 'a' })
+//     })
+// );
 app.use(morgan('dev'));
 app.use(helmet({
     contentSecurityPolicy: {
@@ -70,6 +70,7 @@ const profileRoutes = require('./routes/profile');
 const roomRoutes = require('./routes/room');
 const messageRoutes = require('./routes/messages');
 
+app.use('/', (req, res) => res.send({message: 'Hola'}));
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/profile', profileRoutes);
