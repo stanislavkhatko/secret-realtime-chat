@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue2'
 import path from 'path'
 
 export default defineConfig({
-    envDir: './../',
+    envDir: './',
     plugins: [
         vue(),
     ],

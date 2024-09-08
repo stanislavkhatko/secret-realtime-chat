@@ -10,11 +10,11 @@ import moment from 'moment';
 Vue.config.productionTip = false;
 Vue.config.ignoredElements = ['ion-icons', /^ion-/];
 Vue.prototype.moment = moment;
-
 let socket = null;
 
 /** Socket IO Client - Store in Vuex State for use in components */
-socket = io('/');
+// socket = io('/');
+socket = io(import.meta.env.VITE_API_URL);
 
 store.dispatch('assignSocket', socket);
 
@@ -26,7 +26,8 @@ if (localStorage.authToken) {
 }
 
 /** Axios baseUrl */
-axios.defaults.baseURL = `/`;
+// axios.defaults.baseURL = `/`;
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
 /** Axios Request Intercept */
 axios.interceptors.request.use(

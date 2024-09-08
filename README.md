@@ -1,6 +1,11 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+### Docker build
+docker build -t chat .
+docker run -it -p 8081:80 --rm --name chat-container chat
+
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">

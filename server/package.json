@@ -10,7 +10,12 @@
         "test:local": "jest --coverage --config ./jest.config.js --notify",
         "test:ci": "jest --coverage --config ./jest.config.js --forceExit",
         "dev": "nodemon index.js",
-        "start": "node index.js"
+        "start": "node index.js",
+        "deploy": "gcloud run deploy secret-chat-api --image gcr.io/memo-fb041/secret-chat-api --platform managed  --region europe-west1 --allow-unauthenticated",
+        "docker:build": "docker buildx build --platform linux/amd64 -t secret-chat-api .",
+        "docker:tag": "docker tag secret-chat-api gcr.io/memo-fb041/secret-chat-api",
+        "docker:push": "docker push gcr.io/memo-fb041/secret-chat-api",
+        "docker:deploy": "npm run docker:build && npm run docker:tag && npm run docker:push"
     },
     "author": "Stanislav Khatko <stanislavkhatko@gmail.com>",
     "license": "MIT",

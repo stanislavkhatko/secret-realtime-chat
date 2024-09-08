@@ -47,13 +47,14 @@ const io = new Server(index, {
 // );
 app.use(morgan('dev'));
 app.use(helmet({
-    contentSecurityPolicy: {
-        directives: {
-            "script-src": ["'self'", "unpkg.com"],
-            "img-src": ["'self'", "https: data:"],
-            "connect-src": ["'self'", "unpkg.com"]
-        },
-    },
+    contentSecurityPolicy: false,
+    // contentSecurityPolicy: {
+    //     directives: {
+    //         "script-src": ["'self'", "unpkg.com"],
+    //         "img-src": ["'self'", "https: data:"],
+    //         "connect-src": ["'self'", "unpkg.com"]
+    //     },
+    // },
 }));
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -70,7 +71,7 @@ const profileRoutes = require('./routes/profile');
 const roomRoutes = require('./routes/room');
 const messageRoutes = require('./routes/messages');
 
-app.use('/', (req, res) => res.send({message: 'Hola'}));
+app.use('/hello', (req, res) => res.send({message: 'Hola'}));
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/profile', profileRoutes);

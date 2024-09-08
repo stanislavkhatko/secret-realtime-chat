@@ -6,7 +6,12 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "vite lint",
-        "test": "jest"
+        "test": "jest",
+        "deploy": "gcloud run deploy secret-chat-frontend --image gcr.io/memo-fb041/secret-chat-frontend --platform managed  --region europe-west1 --allow-unauthenticated",
+        "docker:build": "docker buildx build --platform linux/amd64 -t secret-chat-frontend .",
+        "docker:tag": "docker tag secret-chat-frontend gcr.io/memo-fb041/secret-chat-frontend",
+        "docker:push": "docker push gcr.io/memo-fb041/secret-chat-frontend",
+        "docker:deploy": "npm run docker:build && npm run docker:tag && npm run docker:push"
     },
     "author": "Stanislav Khatko <stanislavkhatko@gmail.com>",
     "license": "MIT",

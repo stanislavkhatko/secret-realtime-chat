@@ -1,20 +1,43 @@
-# Use Node.js 22 base image
-FROM node:22
+## Use Node.js 22 base image
+#FROM node:22
+#
+## Set working directory
+#WORKDIR /app/server
+#
+## Copy package.json and package-lock.json
+#COPY package*.json ./
+#
+## Install dependencies
+#RUN npm install
+#
+## Copy the rest of the application code
+#COPY . .
+#
+## Expose port from .env
+#EXPOSE $PORT
+#
+## Command to run the server
+#CMD ["node", "index.js"]
 
-# Set working directory
-WORKDIR /app/server
+# Use an official Node.js runtime as a parent image
+FROM node:20-alpine
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Set the working directory in the container
+WORKDIR /app
+
+COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install --pure-lockfile
 
 # Copy the rest of the application code
 COPY . .
 
-# Expose port from .env
-EXPOSE $PORT
+USER node
 
-# Command to run the server
+# Expose the port your app runs on
+EXPOSE 8080
+
+# Define the command to run your app
 CMD ["node", "index.js"]
+
