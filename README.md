@@ -18,7 +18,7 @@ docker run -it -p 8081:80 --rm --name chat-container chat
   <p align="center">
     Secret Real Time Chat Application created with VueJS, Express, Socket IO, and MongoDB.
     <br />
-    <a href="https://secret-realtime-chat-85815e293731.herokuapp.com">View Demo</a>
+    <a href="https://secret-chat.wordmemo.net">View Demo</a>
     ·
     <a href="https://github.com/stanislavkhatko/secret-realtime-chat/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
