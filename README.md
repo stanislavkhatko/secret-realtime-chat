@@ -1,10 +1,6 @@
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[//]: # ([![MIT License][license-shield]][license-url])
 
-### Docker build
-docker build -t chat .
-docker run -it -p 8081:80 --rm --name chat-container chat
-
+[//]: # ([![LinkedIn][linkedin-shield]][linkedin-url])
 
 <!-- PROJECT LOGO -->
 <br />
@@ -209,11 +205,15 @@ To connect to MongoDB, you need a MongoDB URI. The easiest way to obtain this UR
 
 The JWT Secret is essential for securing JWT Tokens by hashing their signatures. Keep this secret key confidential and update it periodically.
 
+### Docker build
+docker build -t chat .
+docker run -it -p 8081:80 --rm --name chat-container chat
+
 
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/stanislavkhatko
+[linkedin-url]: https://linkedin.com/in/stanislav-khatko
 [product-screenshot]: https://github.com/stanislavkhatko/secret-realtime-chat/blob/main/client/assets/screenshots/secret-chat-16.44.png
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
